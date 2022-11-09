@@ -1,0 +1,24 @@
+
+This README file contains information on building the
+meta-montavista-armsr bsp BSP layer, and booting the images contained
+in the /binary directory.  Please see the corresponding sections below
+for details.
+
+
+Dependencies
+============
+
+This layer depends on:
+
+  URI: git://git.openembedded.org/bitbake
+  branch: 2.0.0
+
+  URI: git://git.openembedded.org/openembedded-core
+  layers: meta
+  branch: kirkstone
+
+Patches
+=======
+
+Maintainer: Support <support@mvista.com>
+

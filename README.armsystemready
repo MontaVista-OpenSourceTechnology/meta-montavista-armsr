@@ -1,0 +1,2 @@
+An ARM system-ready image for CGX, mostly extracted and modified from
+git://git.yoctoproject.org/meta-arm/meta-arm.
