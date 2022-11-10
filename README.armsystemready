@@ -1,2 +1,22 @@
 An ARM system-ready image for CGX, mostly extracted and modified from
 git://git.yoctoproject.org/meta-arm/meta-arm.
+
+To create a SystemReady image, in addition to including this layer,
+you must add the following to your local.conf:
+
+MACHINE = 'generic-arm64'
+DISTRO_FEATURES += " systemd"
+VIRTUAL-RUNTIME_init_manager = "systemd"
+DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+
+
+Then run:
+
+  bitbake core-image-base
+
+The output to use will be:
+
+  tmp/deploy/images/generic-arm64/core-image-base-generic-arm64.wic
+
+That is a raw image to flash to an SD card or memory stick, it has all
+the parittions necessary for SystemReady.
