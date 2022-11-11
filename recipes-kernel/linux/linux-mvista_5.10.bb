@@ -19,7 +19,9 @@ PV = "${LINUX_VERSION}+git${SRCPV}"
 
 SRC_URI = "${MV_KERNEL_TREE};branch=${MV_KERNEL_BRANCH};name=machine \
            ${MV_KERNELCACHE_TREE};type=kmeta;name=meta;branch=${MV_KERNELCACHE_BRANCH};destsuffix=${KMETA} \
-	   file://tcpci.cfg"
+	   file://tcpci.cfg \
+	   file://rockchip.cfg \
+	   "
 
 DEPENDS += "elfutils-native"
 
