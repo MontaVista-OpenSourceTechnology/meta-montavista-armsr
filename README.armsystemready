@@ -20,3 +20,15 @@ The output to use will be:
 
 That is a raw image to flash to an SD card or memory stick, it has all
 the parittions necessary for SystemReady.
+
+You can network boot a SystemReady kernel, but you may need to add the proper
+support for the network devices compiled into the kernel.  They are not all in
+by default.
+
+To network boot, you would use:
+
+dhcp
+tftp Image-generic-arm64.bin
+setenv bootargs "ip=dhcp root=/dev/nfs nfsroot=<serveraddr>:<directory>,nolock,nfsvers=3"
+booti ${loadaddr} - ${fdtcontroladdr}
+
