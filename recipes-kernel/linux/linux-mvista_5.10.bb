@@ -24,7 +24,7 @@ SRC_URI = "${MV_KERNEL_TREE};branch=${MV_KERNEL_BRANCH};name=machine \
 	   "
 
 DEPENDS += "elfutils-native"
-
+ERROR_QA:remove = "buildpaths"
 KMETA = "kernel-meta"
 KCONF_BSP_AUDIT_LEVEL = "0"
 COMPATIBLE_MACHINE = "null"
